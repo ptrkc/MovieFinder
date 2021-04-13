@@ -1,12 +1,13 @@
-const movieListURL = "https://mock-api.bootcamp.respondeai.com.br/api/v2/moviefinder/filmes";
-const movieListRequest = axios.get(movieListURL);
-movieListRequest.then(treatData);
-let movieArray = [];
-let moviesHTML = "";
+getMovies()
 
+function getMovies() {
+    const movieListURL = "https://mock-api.bootcamp.respondeai.com.br/api/v2/moviefinder/filmes";
+    const movieListRequest = axios.get(movieListURL);
+    movieListRequest.then(treatData);
+}
 function treatData(response) {
-    movieArray = response.data;
-    console.log(movieArray)
+    const movieArray = response.data;
+    let moviesHTML = "";
     for (let i = 0; i < movieArray.length; i++) {
         moviesHTML += `
     <div class="movie">

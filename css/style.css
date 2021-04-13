@@ -33,7 +33,10 @@ body {
   margin: 0 auto;
   justify-content: space-around;
 }
-
+.movies span{
+  color: white;
+  font-size: 34px;
+}
 .movie {
   display: flex;
   flex-direction: column;
